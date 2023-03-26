@@ -1,0 +1,136 @@
+/* CTRA_App.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #CCC;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
+
+.CTRA_App{
+    display: flex;
+    flex-flow: column nowrap;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+}
+
+.CTRA_App > .title{
+    font-size: 180%;
+    text-align: center;
+    margin: 0.5em;
+}
+
+.CTRA_App > .title span{
+    opacity: 0.7;
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 65%;
+}
+
+
+.text-container{
+    flex: 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden
+    
+}
+
+.text-container.vSplit{
+    flex-flow: row nowrap;
+}
+
+
+/* the blue-bordered box...*/
+.text-container > div,
+.text-container .title,
+.CustomColours .cards > div
+{
+    border-radius: 0.7em;
+    background-color: white;
+    border: 0.25em solid #008;
+}
+
+.text-container > div{
+    font-size: 160%;
+    flex: 1 auto;
+    position: relative;
+    margin: 0.5em;
+    margin-top: 0.6em;
+}
+
+.text-container:not(.vSplit) > div{
+        height: 50%;
+}
+
+.text-container.vSplit > div{
+        width: 50%;
+}
+
+.text-container .title{
+    font-size: 70%;
+    padding: 0.2em 2em;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: -1.2em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: #008;
+}
+
+.text-container .title:nth-child(2){
+    left: auto;
+    right: 0;
+    padding: 0.2em;
+    font-size: 63.5%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text-container .title:nth-child(2):hover{
+    background: #416587;
+    color: #CCC;
+    border-color: black;
+}
+
+.text-container .area-content{
+    font-size: 60%;
+    height: 100%;
+    padding: 0 0.3em;
+    display: flex;
+}
+
+textarea{
+    flex: 1 auto;
+    resize: none;
+    border: none;
+    font-size: 140%;
+    background: transparent;
+    padding-top: 1.5em;
+}
+
+
+.colour-type{
+    padding-top: 1.5em;
+    position: absolute;
+    width: 102.1%;
+}
+
+.colour-type span{
+    background: #CCC;
+    padding: 0.2em 1em;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.25em;
+    border: 2px solid red;
+}
